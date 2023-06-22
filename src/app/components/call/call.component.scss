@@ -1,0 +1,128 @@
+@import 'variables';
+
+.call {
+  background-image: url(/assets/img/call.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding-top: 100px;
+  padding-bottom: 120px;
+  &__wrap {
+    position: relative;
+    background-image: url(/assets/img/shape.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 67px 34px 79px;
+    border-radius: 7px;
+    @include media(xs) {
+      padding-bottom: 67px;
+    }
+  }
+  &__item {
+    &:first-child {
+      width: 50%;
+      @include media(sm) {
+        width: 100%;
+      }
+    }
+    &:last-child {
+      max-width: 470px;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      @include media(md) {
+        max-width: 360px;
+      }
+      img {
+        display: block;
+        max-width: 100%;
+      }
+    }
+  }
+  &__shape1 {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    animation-name: float-bob2;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    @include media(sm) {
+      display: none;
+    }
+  }
+  &__shape2 {
+    position: absolute;
+    top: 60px;
+    left: 94px;
+    animation: woo 3s infinite;
+    @include media(sm) {
+      display: none;
+    }
+  }
+  &__title {
+    font-size: 36px;
+    line-height: 1.3;
+    color: #fff;
+    margin-bottom: 13px;
+    font-family: 'Inter', sans-serif;
+    @include media(xs) {
+      font-size: 30px;
+    }
+  }
+  &__text {
+    margin-bottom: 40px;
+    p {
+      font-size: 16px;
+      color: #a2bbd2;
+      line-height: 1.7;
+      font-family: 'Raleway', sans-serif;
+    }
+  }
+  &__row {
+    display: flex;
+    align-items: center;
+    @include media(xs) {
+      flex-direction: column;
+    }
+  }
+  &__box {
+    &:not(:last-child) {
+      margin-right: 20px;
+      @include media(xs) {
+        margin-right: 0;
+        margin-bottom: 25px;
+      }
+    }
+    img {
+      display: block;
+      max-width: 100%;
+    }
+  }
+}
+
+@keyframes float-bob2 {
+  0% {
+    transform: translateY(-60px);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(-60px);
+  }
+}
+
+@keyframes woo {
+  0% {
+    transform: rotate3d(0, 0, 0);
+  }
+  50% {
+    transform: rotate3d(0, 1, 0, 180deg);
+  }
+  100% {
+    transform: rotate3d(0, 1, 0, 359deg);
+  }
+}

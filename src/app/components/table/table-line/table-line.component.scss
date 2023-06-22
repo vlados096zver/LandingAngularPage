@@ -1,0 +1,18 @@
+.line {
+  &__wrap {
+    display: flex;
+  }
+  &__item {
+    word-break: break-all;
+    flex: 1;
+    min-width: 150px;
+    font-size: 16px;
+    color: #fff;
+    padding: 15px 10px;
+    border-right: 1px solid #332269;
+    border-bottom: 1px solid #332269;
+    &:first-child {
+      border-left: 1px solid #332269;
+    }
+  }
+}

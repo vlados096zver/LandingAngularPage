@@ -1,0 +1,4 @@
+<button (click)="onTabChange(i)"
+        class="navbar__link"
+        [ngClass]="{'navbar__link--active': i === activeTab}"
+        *ngFor="let tab of tabs; let i = index">{{tab}}</button>

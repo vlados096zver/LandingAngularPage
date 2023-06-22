@@ -30,8 +30,14 @@
               "src/assets"
             ],
             "styles": [
+              "src/fonts.css",
               "src/styles.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/stylings"
+              ]
+            },
             "scripts": []
           },
           "configurations": {

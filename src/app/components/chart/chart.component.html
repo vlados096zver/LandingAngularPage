@@ -1,0 +1,6 @@
+<canvas #canvas></canvas>
+<ng-container *ngFor="let item of _info[0].data; let index = index">
+  <p class="block__info">
+    <span [style.backgroundColor]="_info[0].background[index]" class="block__box"></span>
+    <span class="block__text">{{item}}</span></p>
+</ng-container>

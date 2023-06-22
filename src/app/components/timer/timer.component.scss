@@ -1,0 +1,71 @@
+@import 'variables';
+
+.timer {
+  position: absolute;
+  top: 86%;
+  left: -112px;
+  background: rgb(1,53,126,0.7);
+  max-width: 284px;
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 23px;
+  border-radius: 7px;
+  @include media(lgxs) {
+    position: static;
+    margin: 0 auto;
+    margin-top: 40px;
+  }
+  &__title {
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 17px;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+  }
+  &__wrap {
+    display: flex;
+    justify-content: center;
+  }
+  &__item {
+    width: 50px;
+    font-size: 22px;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    &:not(:last-child) {
+      margin-right: 4px;
+    }
+    &:first-child .timer__box {
+      background-color: #5AB3FF;
+    }
+    &:nth-child(2) .timer__box {
+      background-color: #47DBA7;
+    }
+    &:nth-child(3) .timer__box {
+      background-color: #FFC107;
+    }
+    &:nth-child(4) .timer__box {
+      background-color: #E230CC;
+    }
+  }
+  &__box {
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__text {
+    font-size: 13px;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 20px;
+    font-family: 'Inter', sans-serif;
+  }
+  &__info {
+    color: #fff;
+    text-align: center;
+  }
+}

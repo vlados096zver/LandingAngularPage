@@ -1,0 +1,78 @@
+@import 'variables';
+
+.trading {
+  background-image: url(/assets/img/trading-bg.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 90px;
+  padding-bottom: 70px;
+  &__wrap {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+    @include media(sm) {
+      margin: 0;
+    }
+  }
+  &__item {
+    width: calc(50% - 30px);
+    margin: 0 15px;
+    &:last-child {
+      @include media(sm) {
+        margin-top: 34px;
+      }
+      img {
+        @include media(sm) {
+          margin: 0 auto;
+        }
+      }
+    }
+    @include media(sm) {
+      width: 100%;
+      margin: 0;
+    }
+    img {
+      display: block;
+      max-width: 100%;
+      margin-left: auto;
+    }
+  }
+  .subtitle {
+    margin: 0;
+    margin-bottom: 20px;
+  }
+  .title {
+    text-align: left;
+    margin-bottom: 22px;
+  }
+  .text {
+    max-width: 100%;
+    margin-bottom: 40px;
+    p {
+      text-align: left;
+      &:not(:last-child) {
+        padding-bottom: 1em;
+      }
+    }
+  }
+  .btn {
+    max-width: 172px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+    svg {
+      display: block;
+      fill: #fff;
+      max-width: 20px;
+      margin-right: 15px;
+    }
+    &:hover {
+      svg {
+        fill: #0194FC;
+      }
+    }
+  }
+}

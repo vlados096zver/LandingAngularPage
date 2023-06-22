@@ -1,0 +1,40 @@
+table {
+  width: 100%;
+}
+.error {
+  color: #fff;
+}
+
+.table {
+  &__block {
+    overflow-y: hidden;
+  }
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 26px;
+  }
+  &__title {
+    color: #fff;
+    padding-right: 5px;
+  }
+  &__input {
+    display: block;
+    max-width: 190px;
+    width: 100%;
+    font-size: 16px;
+    border: 1px solid #332269;;
+    border-radius: 3px;
+    padding: 10px 5px;
+    color: #fff;
+    background-color: transparent;
+  }
+  &__empty {
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    padding-top: 10px;
+  }
+}
+

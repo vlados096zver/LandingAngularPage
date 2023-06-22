@@ -1,0 +1,18 @@
+.block {
+  &__info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  &__box {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+  }
+  &__text {
+    font-size: 16px;
+    color: #a2bbd2;
+    padding-left: 5px;
+  }
+}

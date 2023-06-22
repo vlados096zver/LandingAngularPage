@@ -1,0 +1,21 @@
+.area {
+  display: block;
+  width: 100%;
+  min-height: 154px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #fff;
+  outline: none;
+  padding: 14px 0 14px 25px;
+  background-color: #1E1D56;
+  border: 1px solid transparent;
+  font-family: 'Inter';
+  resize: none;
+  margin-bottom: 26px;
+  &::placeholder {
+    color: #fff;
+  }
+  &.error {
+    border: 1px solid red;
+  }
+}

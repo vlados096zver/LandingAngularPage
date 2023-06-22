@@ -1,0 +1,162 @@
+@import 'variables';
+
+.info {
+  position: relative;
+  background-image: url(/assets/img/hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding-top: 200px;
+  padding-bottom: 280px;
+  @include media(lgxs) {
+    padding-bottom: 100px;
+  }
+  &__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  &__item {
+    width: 50%;
+    position: relative;
+    @include media(lgxs) {
+      width: 100%;
+      max-width: 570px;
+      margin: 0 auto;
+    }
+  }
+  &__holder {
+    max-width: 540px;
+    width: 100%;
+  }
+  &__title {
+    display: block;
+    max-width: 290px;
+    width: 100%;
+    font-size: 16px;
+    color: #fff;
+    background-color: #06206D;
+    border-radius: 30px;
+    margin-bottom: 30px;
+    font-family: Inter, sans-serif;
+  }
+  &__subtitle {
+    font-size: 60px;
+    line-height: 1.2;
+    color: #fff;
+    margin-bottom: 14px;
+    font-weight: 700;
+    font-family: Inter, sans-serif;
+    @include media(sm) {
+      font-size: 44px;
+    }
+    span {
+      color: #37A3FE;
+    }
+  }
+  &__text {
+    margin-bottom: 30px;
+    p {
+      font-size: 16px;
+      line-height: 1.7;
+      color: #a2bbd2;
+      font-weight: 500;
+    }
+  }
+  &__pic {
+    position: relative;
+    left: 30%;
+    top: 15px;
+    @include media(lgxs) {
+      position: static;
+      margin-top: 35px;
+    }
+    &>img {
+      @include media(lgxs) {
+        display: block;
+        max-width: 100%;
+        margin: 0 auto;
+      }
+    }
+  }
+  &__five {
+    position: absolute;
+    top: -25%;
+    left: -20%;
+    animation-name: rotatemeTwo;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    @include media(lgxs) {
+      display: none;
+    }
+  }
+  &__two {
+    position: absolute;
+    top: -11%;
+    right: 11%;
+    animation-name: rotateme;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    @include media(lgxs) {
+      display: none;
+    }
+  }
+  &__shape {
+    position: absolute;
+    left: 4%;
+    bottom: 25%;
+    animation-name: float-bob;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    @include media(bg) {
+      display: none;
+    }
+  }
+}
+
+@keyframes float-bob {
+  0% {
+    transform: translateY(-40px);
+  }
+  50% {
+    transform: translateY(-25px);
+  }
+  100% {
+    transform: translateY(-40px);
+  }
+}
+
+@keyframes rotatemeTwo {
+
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-90deg);
+  }
+  50% {
+    transform: rotate(-180deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes rotateme {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+
+}

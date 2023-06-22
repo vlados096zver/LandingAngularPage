@@ -1,0 +1,15 @@
+  <div class="feature__item">
+    <div class="feature__block">
+      <div class="feature__image">
+        <img class="feature__name" [src]="item.image">
+      </div>
+      <div class="feature__schedule">
+        <img [src]="item.schedule">
+      </div>
+    </div>
+    <p class="feature__name">{{item.name}}</p>
+    <div class="feature__inner">
+      <p class="feature__count">USD {{item.count}}</p>
+      <p class="feature__currency">{{item.currency}}</p>
+    </div>
+  </div>

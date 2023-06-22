@@ -1,0 +1,65 @@
+@import 'variables';
+
+:host {
+  display: block;
+  width: calc(100% / 2 - 30px);
+  background: rgb(35,24,117,0.3);
+  box-shadow: 6px 0 21px rgb(0 0 0 / 14%);
+  padding: 39px 33px 21px;
+  margin: 0 15px;
+  margin-bottom: 30px;
+  transition: .5s;
+  @include media(md) {
+    padding: 20px;
+  }
+  @include media(sm) {
+    width: 100%;
+    max-width: 510px;
+    padding: 20px 10px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+  &:hover {
+    .advantages__image img {
+      transform: rotateY(180deg);
+    }
+  }
+}
+
+.advantages {
+  &__item {
+    display: flex;
+    align-items: flex-start;
+  }
+  &__image {
+    width: 90px;
+    img {
+      transition: .8s;
+    }
+  }
+  &__content {
+    width: calc(100% - 90px);
+    padding-left: 14px;
+  }
+  &__title {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 16px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    @include media(md) {
+      font-size: 21px;
+    }
+  }
+  &__text {
+    p {
+      font-size: 16px;
+      line-height: 1.7;
+      color: #a2bbd2;
+      font-family: 'Raleway', sans-serif;
+      @include media(md) {
+        font-size: 14px;
+      }
+    }
+  }
+}

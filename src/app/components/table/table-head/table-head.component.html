@@ -1,0 +1,15 @@
+<div class="head__wrap">
+  <ng-container *ngFor="let item of head">
+    <div class="head__item">
+      <p>{{item}}</p>
+      <div class="head__icons">
+        <svg (click)="type$.next(item); sorting$.next('ASC');" xmlns="http://www.w3.org/2000/svg" width="12px" height="12px" viewBox="0 0 20 20" fill="none">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 18V2m0 0l7 7m-7-7L3 9"/>
+        </svg>
+        <svg (click)="type$.next(item); sorting$.next('DESC');"  xmlns="http://www.w3.org/2000/svg" width="12px" height="12px" viewBox="0 0 20 20" fill="none">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 2v16m0 0l-7-7m7 7l7-7"/>
+        </svg>
+      </div>
+    </div>
+  </ng-container>
+</div>

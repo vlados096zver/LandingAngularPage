@@ -1,0 +1,80 @@
+@import 'variables';
+
+.about {
+  background-image: url(/assets/img/bg.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  padding-top: 80px;
+  padding-bottom: 40px;
+  &__wrap {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__item {
+    width: 50%;
+    position: relative;
+    @include media(sm) {
+      width: 100%;
+    }
+    img {
+      display: block;
+      max-width: 100%;
+      @include media(sm) {
+        margin: 0 auto;
+      }
+    }
+    &:first-child {
+      padding-right: 20px;
+      @include media(sm) {
+        padding-right: 0px;
+      }
+    }
+    &:last-child {
+      padding-left: 20px;
+      @include media(sm) {
+        padding-left: 0px;
+      }
+    }
+  }
+  &__box {
+    display: flex;
+    align-items: center;
+    &:not(:last-child) {
+      margin-bottom: 34px;
+    }
+  }
+  &__image {
+    width: 70px;
+  }
+  &__content {
+    width: calc(100% - 70px);
+    padding-left: 35px;
+  }
+  &__title {
+    font-size: 20px;
+    color: #fff;
+    line-height: 1.2;
+    margin-bottom: 14px;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+  }
+  &__text {
+    p {
+      font-size: 16px;
+      line-height: 1.7;
+      color: #a2bbd2;
+      font-family: 'Raleway', sans-serif;
+    }
+  }
+  &__decor {
+    position: absolute;
+    top: 0;
+    right: 30px;
+    @include media(lgxs) {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+
+.head {
+  &__wrap {
+    display: flex;
+  }
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    min-width: 150px;
+    max-width: 190px;
+    font-size: 16px;
+    color: #fff;
+    padding: 15px 10px;
+    border-top: 1px solid #332269;
+    border-right: 1px solid #332269;
+    border-bottom: 1px solid #332269;
+    font-weight: 700;
+    font-family: 'Raleway', sans-serif;
+    &:first-child {
+      border-left: 1px solid #332269;
+    }
+  }
+  &__icons {
+    display: flex;
+    flex-direction: column;
+    svg {
+      cursor: pointer;
+      display: block;
+      stroke: #fff;
+    }
+  }
+}

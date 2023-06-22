@@ -1,0 +1,187 @@
+
+
+<ng-container *ngIf="data$.length > 0 ; else loader">
+  <app-header></app-header>
+
+  <app-info></app-info>
+
+  <section class="feature">
+    <div class="container">
+      <div class="feature__wrap">
+        <ng-container *ngFor="let item of feature">
+          <app-feature [item]="item"></app-feature>
+        </ng-container>
+      </div>
+    </div>
+  </section>
+
+  <app-about></app-about>
+
+  <section class="rating">
+    <div class="container">
+      <p class="subtitle"><img src="assets/img/title-img.png">Token Rating</p>
+      <p class="title">Crypto Token Rating</p>
+      <div class="rating__wrap">
+        <ng-container *ngFor="let item of rating">
+          <app-rating [item]="item"></app-rating>
+        </ng-container>
+      </div>
+    </div>
+  </section>
+
+  <app-trading></app-trading>
+
+  <section class="advantages">
+    <div class="container">
+      <p class="subtitle"><img src="assets/img/title-img.png">Token Rating</p>
+      <p class="title">Crypto Token Rating</p>
+      <div class="text">
+        <p>Monotonectally productivate virtual benefits vis-a-vis clicks ship. Seamlessly generate user friendly
+
+        </p>
+      </div>
+      <div class="advantages__wrap">
+        <ng-container *ngFor="let item of advantages">
+          <app-advantages [item]="item"></app-advantages>
+        </ng-container>
+      </div>
+    </div>
+  </section>
+
+  <section class="market">
+    <div class="container">
+      <p class="market__title">Current market</p>
+      <div class="market__inner">
+        <p class="market__number">+0.36%</p>
+        <p class="market__text">Market up in the last 24 hours</p>
+      </div>
+      <app-table></app-table>
+    </div>
+  </section>
+
+  <section class="roadmap">
+    <div class="roadmap__shape">
+      <img src="assets/img/round.png" alt="">
+    </div>
+    <div class="container">
+      <p class="subtitle"><img src="assets/img/title-img.png">Road Map</p>
+      <p class="title">Our Strategy & Roadmap</p>
+      <div class="text">
+        <p>Monotonectally productivate virtual benefits vis-a-vis clicks ship. Seamlessly generate user friendly
+        </p>
+      </div>
+      <div class="roadmap__wrap">
+        <ng-container *ngFor="let item of roadmap">
+          <app-roadmap class="roadmap__item" [class.active]="item.date | checkDate" [item]="item"></app-roadmap>
+        </ng-container>
+      </div>
+    </div>
+  </section>
+
+  <section class="chart">
+    <div class="container">
+      <div class="chart__inner">
+        <p class="chart__text">1 CNL = 0.0013 BTC</p>
+        <button class="btn btn--buy">Buy now</button>
+      </div>
+      <div class="chart__wrap">
+        <div class="chart__item">
+          <app-chart *ngIf="chartInfo1.length > 0"
+                     [name]="'mychart'"
+                     [info]="chartInfo1"
+          >
+          </app-chart>`
+        </div>
+        <div class="chart__item">
+          <app-chart *ngIf="chartInfo2.length > 0"
+                      [name]="'mychar2'"
+                     [info]="chartInfo2">
+          </app-chart>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <app-call></app-call>
+
+  <section class="team">
+    <div class="container">
+      <p class="subtitle"><img src="assets/img/title-img.png">Team</p>
+      <p class="title">Met our Team Players</p>
+      <div class="text">
+        <p>Monotonectally productivate virtual benefits vis-a-vis clicks
+          ship. Seamlessly generate user friendly</p>
+      </div>
+      <div class="team__wrap">
+        <ng-container *ngFor="let item of data$[0]">
+          <app-team [item]="item"></app-team>
+        </ng-container>
+      </div>
+      <div class="team__inner">
+        <div class="team__pic">
+          <img src="assets/img/team/btn.png" alt="">
+        </div>
+       <div class="team__more">
+         <span>More Member</span>
+         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M314.1 94.11c3.37-7.86 11.28-13.57 19.84-14.12 7.24-.68 14.5 2.35 19.47 7.59 48.52 48.49 97.02 96.99 145.53 145.49 3.12 3.21 6.57 6.17 9.1 9.9 2.33 3.44 3.47 7.52 3.96 11.6v2.73c-.47 4.35-1.75 8.7-4.33 12.28-2.51 3.47-5.75 6.29-8.72 9.34-48.49 48.48-96.98 96.97-145.48 145.44-4.96 5.26-12.23 8.33-19.48 7.65-8.81-.54-16.93-6.56-20.15-14.74-3.7-8.76-1.33-19.47 5.49-26.03 37.07-37.18 74.26-74.24 111.34-111.41-135.26-.05-270.51.02-405.77-.03-5.81.05-11.73-1.69-16.2-5.48C3.59 270.2.6 263.88 0 257.4v-2.66c.53-6.53 3.56-12.91 8.7-17.06 4.5-3.82 10.47-5.55 16.32-5.48 135.21-.04 270.43.01 405.65-.03-35.61-35.68-71.28-71.29-106.91-106.94-3.33-3.37-7.01-6.59-9.12-10.91-3.17-6.22-3.38-13.84-.54-20.21Z"/></svg>
+       </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq">
+    <div class="container">
+      <p class="subtitle"><img src="assets/img/title-img.png">FAQS</p>
+      <p class="title">Frequently asked Question</p>
+      <div class="text">
+        <p>Monotonectally productivate virtual benefits vis-a-vis clicks ship. Seamlessly generate user friendly</p>
+      </div>
+      <app-navbar [tabs]="tabs" (activeTabChange)="changeState($event)" [(activeTab)]="activeTab"></app-navbar>
+      <div class="faq__wrap">
+        <div class="faq__item">
+          <ng-container *ngFor="let tab of tabs; let index = index">
+            <ng-container *ngIf="activeTab === index">
+              <ng-container *ngFor="let item of faq; let point = index;  trackBy: trackByFn">
+                <app-faq [item]="item"
+                         (onOpen)="onOpen($event)"
+                         *ngIf="item.type == tab.toLowerCase()"></app-faq>
+              </ng-container>
+            </ng-container>
+          </ng-container>
+        </div>
+        <div class="faq__item">
+          <img src="assets/img/faq.png" alt="faq">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="blog">
+    <div class="container">
+      <p class="subtitle"><img src="assets/img/title-img.png">Latest News</p>
+      <p class="title">Recent Blog Post</p>
+      <div class="blog__wrap">
+        <ng-container *ngFor="let item of data$[1]">
+          <app-blog [item]="item"></app-blog>
+        </ng-container>
+      </div>
+    </div>
+  </section>
+
+  <app-contacts></app-contacts>
+
+  <app-footer></app-footer>
+
+  <button appScroll class="scroll-area" (click)="scrollUp()">
+    <svg class="icon-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+      <path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"/>
+    </svg>
+    <svg class="icon-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+      <path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"/>
+    </svg>
+  </button>
+</ng-container>
+
+<ng-template #loader>
+  <app-loader></app-loader>
+</ng-template>

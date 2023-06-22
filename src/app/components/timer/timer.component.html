@@ -1,0 +1,27 @@
+<div class="timer" *ngIf="(timeLeft$ | async) as t">
+  <ng-container *ngIf="timeDifference > 0; else sorry">
+    <div class="timer__title">Token Sale Start Now In</div>
+    <div class="timer__wrap">
+      <div class="timer__item">
+        <div class="timer__box">{{t.daysToDday}}</div>
+        <div class="timer__text">days</div>
+      </div>
+      <div class="timer__item">
+        <div class="timer__box">{{t.hoursToDday}}</div>
+        <div class="timer__text">hours</div>
+      </div>
+      <div class="timer__item">
+        <div class="timer__box">{{t.minutesToDday}}</div>
+        <div class="timer__text">mins</div>
+      </div>
+      <div class="timer__item">
+        <div class="timer__box">{{t.secondsToDday}}</div>
+        <div class="timer__text">sec</div>
+      </div>
+    </div>
+  </ng-container>
+  <ng-template #sorry>
+    <p class="timer__info">Token sale is started</p>
+  </ng-template>
+</div>
+

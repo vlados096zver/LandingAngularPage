@@ -1,0 +1,49 @@
+<section class="contacts">
+  <div class="container container--block">
+    <p class="subtitle"><img src="assets/img/title-img.png">Contacts</p>
+    <p class="title">Stay Update With Us</p>
+    <div class="contacts__row">
+      <div class="contacts__col">
+        <div class="contacts__image">
+          <img src="assets/img/email.svg">
+        </div>
+        <p class="contacts__info">example@gmail.com</p>
+      </div>
+      <div class="contacts__col">
+        <div class="contacts__image">
+          <img src="assets/img/call.svg">
+        </div>
+        <p class="contacts__info">+ 00 234 (9606)170</p>
+      </div>
+      <div class="contacts__col">
+        <div class="contacts__image">
+          <img src="assets/img/telegram.svg">
+        </div>
+        <p class="contacts__info">Join Us on Telegram</p>
+      </div>
+    </div>
+  </div>
+  <div class="container container--contacts">
+    <div class="contacts__wrap">
+      <div class="contacts__item">
+        <app-input-line [submitted]="isSubmitted" [placeholder]="'Email'" [control]="c_email"></app-input-line>
+      </div>
+      <div class="contacts__item">
+        <app-input-line [submitted]="isSubmitted" [placeholder]="'Name'" [control]="c_name"></app-input-line>
+      </div>
+      <div class="contacts__item">
+        <p class="contacts__title">Status</p>
+        <app-input-radio [control]="c_status" [name]="'status'" [value]="'active'"></app-input-radio>
+        <app-input-radio [control]="c_status" [name]="'status'" [value]="'inactive'"></app-input-radio>
+      </div>
+      <div class="contacts__item">
+        <p class="contacts__title">Gender</p>
+        <app-input-radio [control]="c_gender" [name]="'gender'" [value]="'male'"></app-input-radio>
+        <app-input-radio [control]="c_gender" [name]="'gender'" [value]="'female'"></app-input-radio>
+      </div>
+    </div>
+
+    <app-input-textarea  [submitted]="isSubmitted" [placeholder]="'Message'" [control]="c_message"></app-input-textarea>
+    <button class="btn btn--send" (click)="sendContact()">Submit message</button>
+  </div>
+</section>
