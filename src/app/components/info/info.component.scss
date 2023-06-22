@@ -9,7 +9,12 @@
   padding-top: 200px;
   padding-bottom: 280px;
   @include media(lgxs) {
+    padding-top: 100px;
     padding-bottom: 100px;
+  }
+  &__inner {
+    display: flex;
+    align-items: center;
   }
   &__wrap {
     display: flex;
@@ -30,15 +35,29 @@
     width: 100%;
   }
   &__title {
-    display: block;
-    max-width: 290px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 295px;
     width: 100%;
     font-size: 16px;
     color: #fff;
     background-color: #06206D;
     border-radius: 30px;
+    padding: 10px;
     margin-bottom: 30px;
     font-family: Inter, sans-serif;
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 25px;
+      height: 25px;
+      background: #37A3FE;
+      border-radius: 100%;
+      color: #fff;
+      margin-right: 10px;
+    }
   }
   &__subtitle {
     font-size: 60px;

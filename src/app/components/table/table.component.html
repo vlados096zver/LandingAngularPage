@@ -1,5 +1,5 @@
-  <form class="table__inner" >
-    <p class="table__title">1Search</p>
+  <form class="table__inner">
+    <p class="table__title">Search</p>
     <input  #input (keyup)="searchTerm$.next($any($event.target).value)" type="search" class="table__input">
   </form>
   <div class="table__block">
@@ -7,7 +7,6 @@
     <ng-container *ngFor="let item of table">
      <app-table-line [item]="item"></app-table-line>
     </ng-container>
-
   </div>
 
 

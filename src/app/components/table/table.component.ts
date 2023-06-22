@@ -34,7 +34,6 @@ export class TableComponent {
           console.log(err)
         }
       })
-
   }
 
   search(terms: Observable<string>) {
