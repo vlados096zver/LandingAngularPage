@@ -6,9 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  isShowSubmenu = false;
   isShowMenu = false;
-  activeSelection: string = '';
   menu: any[] = [
     {
       point: 'Demo',
@@ -50,11 +48,10 @@ export class HeaderComponent {
     },
   ];
 
-  openLink(e: any, key: string) {
+  openLink(e: any, key: any) {
     e.preventDefault();
     if (window.innerWidth <= 960) {
-      this.isShowSubmenu  = !this.isShowSubmenu;
-      this.activeSelection = key;
+      key.isOpen = !key.isOpen;
     }
   }
 

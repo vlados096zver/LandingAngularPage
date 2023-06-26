@@ -8,7 +8,7 @@
       <ul class="header__list" [class.open]="isShowMenu">
         <ng-container *ngFor="let item of menu">
           <li class="header__dropdown" [class.mark]="item.submenu">
-            <a (click)="openLink($event, item.key)" class="header__box" [class.open]="item.key == activeSelection">{{item.point}}</a>
+            <a (click)="openLink($event, item)" class="header__box" [class.open]="item.isOpen">{{item.point}}</a>
             <ul class="header__submenu" *ngIf="item.submenu">
               <ng-container *ngFor="let elem of item.submenu">
                 <li><a href="">{{elem.link}}</a></li>
